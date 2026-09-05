@@ -4,7 +4,8 @@
 ## How to Study
 
 ## Part I
-This  part is an introduction to SQL schema statements also known as DDL _'Data Definition language'  _
+This  part is an introduction to SQL schema statements also known as DDL _'Data Definition language'_  and SQL data statements also known as DML _Data manipulation Language_.
+Here we are going to explore commands That allow us to CREATE DATABASES,Define table Schemas and, Alter Table Schemas then we will explore commands to manipulate data. 
 
 
 
@@ -27,6 +28,7 @@ the most mature and popular commercial products include:
 
 `mysql -u root -p` -> Login to MYSQL as root. <br>
 `CREATY USER 'username'@'localhost' IDENTIFIED BY 'passwowd';` -> Creates a user.<br>
+`DROP USER 'username'@'localhost';` -> Deletes a user
 `GRANT ALL PRIVILEGES ON *.* TO 'user'@'localhost';` -> Gives all privileges to all databases to a specific user,
 we can add **WITHI GRANT OPTION** at the end so the user can give privileges to other users. <br>
 `GRANT ALL PRIVILEGES ON mydb.* TO 'user'@'localhost';` -> Gives all privileges to a specific database to a user. <br>
