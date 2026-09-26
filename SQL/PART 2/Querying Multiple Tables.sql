@@ -24,19 +24,18 @@ INNER JOIN employee e
 ON a.open_emp_id=e.emp_id
 WHERE cust_type_cd ='B';
 
+-- Using Subqueries As Tables
+
+SELECT a.account_id, a.cust_id,a.open_date, a.product_cd
+FROM account a INNER JOIN 
+(SELECT emp_id, assigned_branch_id
+FROM employee
+WHERE year(start_date) < 2007
+AND (title ='Teller' OR title ='Head teller')) e
+ON a.open_emp_id= e.emp_id
+INNER JOIN (SELECT branch_id FROM branch WHERE name = 'woburn Branch') b
+ON e.assigned_branch_id = b.branch_id;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
 
