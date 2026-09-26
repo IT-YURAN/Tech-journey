@@ -69,6 +69,31 @@ When working with null, you should remember:
 * An expression can be null, but it can never equal null.
 * Two nulls are never equal to each other.
 
+## JOINING THREE OR  MORE TABLES
+
+Joining three tables is similar to joining two tables, but with one slight wrinkle. With
+a two-table join, there are two tables and one join type in the from clause, and a single
+on subclause to define how the tables are joined. With a three-table join, there are three
+tables and two join types in the from clause, and two on subclauses
+
+## Does Join Order Matter?
+SQL is a nonprocedural language, meaning
+that you describe what you want to retrieve and which database objects need to be
+involved, but it is up to the database server to determine how best to execute your
+query. 
+Using statistics gathered from your database objects, the server must pick one
+of three tables as a starting point (the chosen table is thereafter known as the driving
+table), and then decide in which order to join the remaining tables. Therefore, the order
+in which tables appear in your from clause is not significant
+
+## Using Subqueries As Tables
 
 
+## JOIN conditions Versus Filter conditions
 
+You are now familiar with the concept that join conditions belong in the 'on' subclause,
+while filter conditions belong in the 'where' clause. However, SQL is flexible as to where
+you place your conditions, so you will need to take care when constructing your queries.
+
+
+## Working with Sets

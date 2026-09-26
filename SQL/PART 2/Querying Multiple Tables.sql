@@ -12,8 +12,17 @@ USE bank;
 
 SELECT e.fname,e.lname,d.name -- INNER JOIN
 FROM employee e INNER JOIN department d
-ON e.dept_id =d.dept_id; -- We can use 'USING(table_column)'
+ON e.dept_id =d.dept_id; -- We can use 'USING(table_column)' Only if the column name is the same for both tables
 
+
+-- JOINING THREE OR MORE TABLES
+
+SELECT a.account_id, c.fed_id, e.fname,e.lname
+FROM account a INNER JOIN customer c
+ON a.cust_id= c.cust_id
+INNER JOIN employee e 
+ON a.open_emp_id=e.emp_id
+WHERE cust_type_cd ='B';
 
 
 
